@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Base64 en Base58</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+	
+	
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="brand">Base64 en Base58</a>
+            <ul class="nav">
+              <li><a href="Index.html">Home</a></li>
+			  </ul>
+			  
+
+			  
+			  
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Talstelsels in de informatica</li>
+              <li><a href="UB.html">Unair + Binair</a></li>
+              <li><a href="HEX.html">Hexadecimaal</a></li>
+              <li><a href="OB32.html">Octaal + Base32</a></li>
+              <li><a href="TQ.html">(Gebalanceerd) Ternair + Duodecimaal</a></li>
+              <li><a href="B6458.html">Base64 + Base58</a></li>
+              <li><a href="GRAY.html">Gray Code</a></li>
+              <li class="nav-header">Bonus talstelsels</li>
+              <li><a href="DECHA.html">Decimaal, Hindisch-Arabisch</a></li>
+              <li><a href="DESOO.html">Decimale talstelels uit het Oosten</a></li>
+              <li><a href="KLAS.html">Klassieke talstelels</a></li>
+              <li><a href="LAT.html">Latijns-Amerikaanse talstelels</a></li>
+              <li class="nav-header">Extra</li>
+              <li><a href="Takenlijst.html">Taakverdeling</a></li>
+              <li><a href="Bronnen.html">Bronnen</a></li>
+              <li><a href="FAQ.html">Vaak gestelde vragen</a></li>
+              <li><a href="Gallerij.html">Galerij</a></li>
+              <li class="nav-header">Muziek</li>
+              <audio controls>
+                <source src="Music.mp3"/>
+              </audio> </li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+
+        <h1>Base64 en Base58</h1>
+        <h4>Base64 is een belangrijk talstelsel voor de informatica, Base58 is een variant van Based64, maar wat zijn het en hoe werkt het?</h4>
+        <br><br> <img src="Base64-1.png" alt="Base64" style="width:750px;height:375px;"> <img src="Base64-2.png" alt="Base64" style="width:500px;height:250px;"> <br><br><br><br>
+
+        <h1>Base64</h1>
+        <div class="row-fluid">
+          <div class="row-fluid">
+              <div class="span4">
+                  <p>(1) Base 64 is een populaire binair naar tekst algoritme. Het wordt gebruikt tegen data corruptie tijdens het overdragen van de data tussen 2 opslagplekken. Ook wordt het gebruikt data naar tekst te veranderen. Het werkt doormiddel van stukken data op te splitsen in delen van 6, deze delen zijn veiliger omdat ze kleiner zijn. Later kan de data weer terug naar zijn originele vorm. Base64 bestaat al – voor computer termen – erg lang. Het werd bedacht toen men nog ruziede over hoeveel bits er in een byte moeten zitten. Tegenwoordig zijn dat er 8, daarvoor echter was het soms 7, 6 en soms zelfs maar 3. Toen 8 de norm werd, moest veel verplaatst worden naar het nieuwe systeem, dit ging echter niet altijd goed en veel dingen gingen verloren. Meerdere manieren om over te zetten kwamen later om data te verplaatsen, maar vanwege de efficiëntie en makkelijkheid van base64 werd het al gauw de populairste. Een van de grote nadelen van base 64 is het aantal opslag wat het gebruikt. Het gebruikt namelijk altijd 33% meer opslag dan het originele bestand. N * 4/3, waarbij N de originele grootte was. Ook is het niet te gebruiken als beveiliging, sinds het makkelijk terug te draaien is. Met een online vertaler kan je makkelijk de informatie terughalen.  </p>
+              </div><!--/span-->
+              <div class="span4">
+                  <p>(2) Het "alfabet" voor grondtal 64 zijn als volgt: 0-9 en de letters a-z (inclusief de hoofdletters). De ‘=’ teken wordt gebruikt zodat de computer weet in welke letter of welk deel van de informatie hij leest, want alle informatie is opgedeeld in stukjes van 4, zo komen er geen fouten voor die systemen niet kunnen lezen, anders zou dit leiden tot heel weinig mogelijke stukken informatie die opgestuurd kan worden omdat de computers zien dat er tekens ontbreken. Stel een stukje heeft maar 2 letters/cijfers/speciale tekens, doet hij er dus 2 extra ‘=’ tekens achter. Het is Base64 want elke letter, hoofdletter, nummers 0-9 en de tekens “+” en “/”, is bij elkaar 64 verschillende tekens (26+26+10+2). Base64 is een heel universeel stelsel en kan zelfs helpen bij ouder systemen waar een byte, 7 bits bevat. Dit doet hij door aan de linker kant van een 7 bit stuk informatie gewoon een 0 toe te voegen, dan worden het 8 bits, maar de intrinsieke waarde van dat getal veranderd niks want het is immers een 0. Als je via Base64 dingen opstuurt maakt het systeem gebruik van tekensets zoals ASCII. Dit hecht een teken met een waarde; Voor “a” geldt bijvoorbeeld: Decimaal = 97, Octaal = 141, Hexadecimaal = 61 en Binair = 1100001. Als je dan bijvoorbeeld “abc” wilt verzenden met gebruik van Base64, moet je van ASCII via binair, naar base64 veranderen, dat gaat als volgt: 
+                    “a” = 1100001	b” = 1100010	“c” = 1100011, Zijn de ASCII binaire, deze hebben echter allemaal 7 bits (dit is niet een vermenigvuldig factor met 24, in tegenstelling tot 8 en 6), daarom moet er een 0 links komen te staan dus wordt het:                     “a” = 01100001, “b” = 01100010, “c” = 01100011 
+                    De intrinsieke waarden van deze getallen in binair zijn, na een 0 er links te hebben gekregen, nog steeds hetzelfde.  </p>
+              </div><!--/span-->
+          </div> <!--/row-->
+      
+          <div class="row-fluid">
+              <div class="row-fluid">
+                  <div class="span4">
+                      <p>(3) Nu heb je stukken van 8 bits, die in de ASCII-tabel allemaal behoren tot een teken, in dit geval a, b en c. Deze “plak” je nu achter elkaar in volgorde, je krijgt; 011000010110001001100011. 
+
+                        Nu om het naar Base64 te vertalen. Het vertalen van een syntax van achter elkaar “geplakte” binaire reeksen naar base64 doe je door deze 3 bytes, met ieder 8 bits, nu op te splitsen in stukken van 6 bits, je krijgt dus 4 “bytes”. Het vervolg: 011000 010110 001001 100011. Met deze reeksen getallen kan je, uit het 6-bit naar Base64 Tabel de Base64 code/reeks/syntax halen. Zie hier de tabel: </p>
+                  </div><!--/span-->
+                  <div class="span4">
+                      <p></p>
+                  </div><!--/span-->
+              </div> <!--/row-->
+          </div> <!--/row-->
+      
+          <div class="row-fluid">
+              <div class="row-fluid">
+                  <div class="span4">
+                      <p></p>
+                  </div><!--/span-->
+                  <div class="span4">
+                      <p></p>
+                  </div><!--/span-->
+              </div> <!--/row-->
+          </div> <!--/row-->
+      </div> <!--/row-->
+
+      <h1>Base58</h1>
+      <div class="row-fluid">
+        <div class="row-fluid">
+            <div class="span4">
+                <p>(1) Base58 is een gemodificeerde variant van Base64. Het bevat nagenoeg dezelfde tekens, degene die missen zijn tekens die sterk lijken op andere. Ook is het bijna even efficient als base64. Dit wordt gedaan zodat er geen verwarring komt bij het lezen van de lange stukken informatie. Dit wordt vaak gebruikt voor grote hele getallen en om die te noteren. Base58 wordt door deze twee kenmerken - 1. De absentie van symbolen zoals “O”, “0”, “I” en “l” en 2. (2??). Het wordt voornamelijk gebruikt in de cryptowereld. Het is bedacht door Satoshi Nakamoto.  </p>
+            </div><!--/span-->
+            <div class="span4">
+                <p>(2) Het wordt dus voornamelijk gebruikt in de cryptowereld, een belangrijk voorbeeld hiervan is Bitcoin. De wallets – hetgene waar je Bitcoins zijn opgslagen – heeft een identificatie nummer, deze nummers kunnen gecodeerd worden in base58. Omdat deze nummers vaak privé zijn wordt de manier waarop de code wordt omgezet elke keer verandert, zo kan het niet gedecodeerd worden. </p>
+            </div><!--/span-->
+        </div> <!--/row-->
+    
+        <div class="row-fluid">
+            <div class="row-fluid">
+                <div class="span4">
+                    <p>(3) In het feit dat base58 "maar" 58 symbolen heeft ligt ook het probleem waardoor het iets minder efficient is. Een voorbeeld hiervan is dat Bitcoin wallets 35 karakters nodig hebben in plaats van de 34 karakters bij een base 64 codering, echter is het wel effectiever dan base32, waar je 40 karakters nodig zou hebben</p>
+                </div><!--/span-->
+                <div class="span4">
+                    <p></p>
+                </div><!--/span-->
+            </div> <!--/row-->
+        </div> <!--/row-->
+    
+        <div class="row-fluid">
+            <div class="row-fluid">
+                <div class="span4">
+                    <p></p>
+                </div><!--/span-->
+                <div class="span4">
+                    <p></p>
+                </div><!--/span-->
+            </div> <!--/row-->
+        </div> <!--/row-->
+    </div> <!--/row-->
+    
+      
+	
+
+  <hr>
+      <footer>
+        <p>Federico Haster & Robin Hamerslag, 2024</p>
+      </footer>
+
+
+  </body>
+</html>

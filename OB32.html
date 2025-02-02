@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Octaal en Base32</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+	
+	
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="brand">Octaal en Base32</a>
+            <ul class="nav">
+              <li><a href="Index.html">Home</a></li>
+			  </ul>
+			  
+
+			  
+			  
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Talstelsels in de informatica</li>
+              <li><a href="UB.html">Unair + Binair</a></li>
+              <li><a href="HEX.html">Hexadecimaal</a></li>
+              <li><a href="OB32.html">Octaal + Base32</a></li>
+              <li><a href="TQ.html">(Gebalanceerd) Ternair + Duodecimaal</a></li>
+              <li><a href="B6458.html">Base64 + Base58</a></li>
+              <li><a href="GRAY.html">Gray Code</a></li>
+              <li class="nav-header">Bonus talstelsels</li>
+              <li><a href="DECHA.html">Decimaal, Hindisch-Arabisch</a></li>
+              <li><a href="DESOO.html">Decimale talstelels uit het Oosten</a></li>
+              <li><a href="KLAS.html">Klassieke talstelels</a></li>
+              <li><a href="LAT.html">Latijns-Amerikaanse talstelels</a></li>
+              <li class="nav-header">Extra</li>
+              <li><a href="Takenlijst.html">Taakverdeling</a></li>
+              <li><a href="Bronnen.html">Bronnen</a></li>
+              <li><a href="FAQ.html">Vaak gestelde vragen</a></li>
+              <li><a href="Gallerij.html">Galerij</a></li>
+              <li class="nav-header">Muziek</li>
+              <audio controls>
+                <source src="Music.mp3"/>
+              </audio> </li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+
+        <h1>Octaal en Base32</h1>
+        <h4> Het Octale stelse en Base32 worden beide niet al te vaak gebruikt in de informatica, toch hebben ze interessante kenmerken en een interessante geschiedenis</h4>
+        <br><br><br> <img src="Base32.png" alt="Base32" style="width:750px;height:400px;"> <br><br>
+
+        <h1>Octaal</h1>
+        <div class="row-fluid">
+          <div class="row-fluid">
+              <div class="span4">
+                  <p>(1) Een octaal stelsel heeft 8 symbolen; base8. Onze octale stelsels gebruiken de symbolen van 0-7. Net als de meeste minder gebruikte talstelsels schrijf je na een getal een 8 in subscript. De Engelse naam voor het octale stelsel, octaal, was in 1801 door James Anderson bedacht.  </p>
+              </div><!--/span-->
+              <div class="span4">
+                  <p> (2) Het Octale stelsel wordt echter al gebruikt sinds het antieke tijdperk, waar mensen hun handen gebruikt om dieren te tellen, dit in groepjes van 8. Dit was omdat de duim vaak verbonden was met de vinger waar je bent met tellen. Sommige mensen denken zelfs dat een octaal stelsel al in gebruik was voor het decimale stelsel. Het moderne octale stelsel is echter ontstaan na het moderne binaire stelsel door het gemakkelijker lezen van het octale stelsel ten opzichte van het binaire stelsel.  </p>
+              </div><!--/span-->
+          </div> <!--/row-->
+      
+          <div class="row-fluid">
+              <div class="row-fluid">
+                  <div class="span4">
+                      <p> (3) Een van de voordelen van het octale stelsel is dat het makkelijk is om binaire getallen om te zetten van en naar octaal. Ook kunnen we grote, binaire getallen in kleine groepen omzetten. Het wordt echter niet al te veel gebruikt vanwege de limitaties. Een paar voorbeelden van programma's die het echter wel gebruiken zijn UNIX en het CHMOD-commando van Linux. Ook wordt het octale stelsel soms buiten de informatica gebruikt. Zo gebruiken sommige indianenstammen het, en was het te zien in de film “Avatar”. Beide van deze groepen, hoewel 1 van deze fictief is, gebruikten het vanwege hun vingers. De karakters in "Avatar" hadden namelijk maar 4 vingers, waardoor een octaal stelsel vrij logisch is. De Indianenstammen kwamen op het systeem omdat ze de lucht tussen hun vingers tellen. </p>
+                  </div><!--/span-->
+                  <div class="span4">
+                      <p> (4) De belangrijkste taak van het octale stelsel is het omzetten van en naar binair, waarmee je het gemakkelijk kan omzetten naar andere talstelsel. Het omzetten naar binair is vrij simpel; elk nummer wordt eerst omgezet naar 3 bit binaire nummer, zo wordt 1 001 en 5 101. Deze getallen kan je achter elkaar stoppen voor een volledig decimaal getal; 158    = 001-1012. Voor het omzetten van binair naar octaal gebruik je de volgende stappen: Je splitst het binaire getal op in groepjes van 3, en die groepje zet e om naar de octale variant, eigenlijk dus hetzelfde als van octaal naar binair, maar dan andersom. De reden dat deze omzetting nodig is, is door het feit dat computers octale getallen niet kunnen lezen, daarom moet het eerst naar binair worden omgezet.  </p>
+                  </div><!--/span-->
+              </div> <!--/row-->
+          </div> <!--/row-->
+      
+          <div class="row-fluid">
+              <div class="row-fluid">
+                  <div class="span4">
+                      <p>(5) Aan het begin van de computertijd werd octaal vaker gebruikt, met name om binaire getallen makkelijker te laten zien, tegenwoordig neemt het Hexadecimale systeem echter deze taak op zichzelf, aangezien het nog korter is dan het octale systeem, maar ook omdat computers vaak met even getallen werken, terwijl het octale stelsel in groepen van 3, 8 is namelijk 2 tot de macht 3, bits worden toegepast. Toch wordt het hier en daar nog gebruikt in gespecialiseerde applicaties zoals computers van auto's.  </p>
+                  </div><!--/span-->
+                  <div class="span4">
+                      <p></p>
+                  </div><!--/span-->
+              </div> <!--/row-->
+          </div> <!--/row-->
+      </div> <!--/row-->
+
+      <h1>Base32</h1>
+      
+      <div class="row-fluid">
+        <div class="row-fluid">
+            <div class="span4">
+                <p>(1) Base 32, en wij richten dan specifiek de Crockford variant, is een alternatief ten opzichte van base64. Het is een manier om dingen te coderen en te decoderen. Het gebruikt een alfabet van 32 symbolen, elk symbool gebruikt 5 bits, vergeleken de 6 die Base64 gebruikt. Het doel van base32 is om een beter leesbare versie van het base64 stelsel te maken. Ook is het belangrijk om te onthouden dat Base32 direct zit tussen het hexadecimale stelsel (4 bits) en Base74 (6 bits). Gemiddeld is een Base32 gecodeerd iets 20% langer dan een base64 versie. </p>
+            </div><!--/span-->
+            <div class="span4">
+                <p>(2) Een andere reden voor het gebruik van Base32 is vanwege de hoge kans bij Base64 dat een symbool verkeerd geïnterpreteerd wordt, deze kans is natuurlijk een stuk kleiner als je maar de helft van de symbolen hebt.  </p>
+            </div><!--/span-->
+        </div> <!--/row-->
+    
+        <div class="row-fluid">
+            <div class="row-fluid">
+                <div class="span4">
+                    <p>(3) Er zijn meerdere scenario's waarin Base32 handig is, zo kan je bijvoorbeeld makkelijk binaire data opslaan of overbrengen in een omgeving waar je alleen toegang hebt tot ASCII, je kan er crypthografische sleutels mee laten zien in ASCII-formaat en je kan ook je data opslaan op een manier waar er minder kans is op falen of fouten. Het is wel belangrijk om te onthouden dat Base32 niet een manier is om te versleutelen, puur om data om te zetten.  </p>
+                </div><!--/span-->
+                <div class="span4">
+                    <p>(4) Het Crockford base32 gebruikt 10 cijfers en 22 letters, alle letters zijn als het gecodeerd is een hoofdletter, maar zodra je het decodeert kan het ook een kleine letter worden. De 4 letters die niet gebruikt worden zijn I, L, O en U. De meeste van deze zijn weggehaald om verwarring te voorkomen. Verder kan je – gebruiken om het makkelijker leesbaar te maken, tijdens het decoderen vallen deze weg.  </p>
+                </div><!--/span-->
+            </div> <!--/row-->
+        </div> <!--/row-->
+    
+        <div class="row-fluid">
+            <div class="row-fluid">
+                <div class="span4">
+                    <p>(5) Om iets te coderen naar bits gebruikt men de ASCII-code, elke karakter verandert naar binaire getallen volgens deze code. Het binaire getal dat je krijgt splits je daarna op in groepjes van 5 bits, deze zet je ieder om in een van de symbolen in het Base32 alfabet. In het geval dat het getal niet deelbaar is door 5, voeg je 0en toe aan het einde van het getal. Om een getal te decoderen doe je het omgekeerde van wat je doet om het te coderen.   </p>
+                </div><!--/span-->
+                <div class="span4">
+                    <p>(6) We hebben al een paar keer ASCII-code vernoemd, maar wat is het? ASCII-code staat voor American Standard Code for Information Interchange. Het geeft een 8 bit code aan 256 karakters (het maximale aantal bij 8 bits). Deze karakters hebben iedere een binair getal waarmee je het kan herkennen. Het was gepubliceerd in 1963 maar heeft in de loop van de jaren nog een aantal updates gehad. Tegenwoordig gebruiken de meeste computer ASCII-code maar er zijn ook nog een aantal die andere methodes gebruiken. Door de limiet van 256 karakters kunnen echter niet veel symbolen iets krijgen, hierdoor is later Unicode ontstaan, wat bijna alle landen nu gebruiken.  </p>
+                </div><!--/span-->
+            </div> <!--/row-->
+        </div> <!--/row-->
+    </div> <!--/row-->
+    
+  <hr>
+      <footer>
+        <p>Federico Haster & Robin Hamerslag, 2024</p>
+      </footer>
+
+
+  </body>
+</html>

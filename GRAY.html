@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Gray Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+	
+	
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="brand">Gray Code</a>
+            <ul class="nav">
+              <li><a href="Index.html">Home</a></li>
+			  </ul>
+			  
+
+			  
+			  
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Talstelsels in de informatica</li>
+              <li><a href="UB.html">Unair + Binair</a></li>
+              <li><a href="HEX.html">Hexadecimaal</a></li>
+              <li><a href="OB32.html">Octaal + Base32</a></li>
+              <li><a href="TQ.html">(Gebalanceerd) Ternair + Duodecimaal</a></li>
+              <li><a href="B6458.html">Base64 + Base58</a></li>
+              <li><a href="GRAY.html">Gray Code</a></li>
+              <li class="nav-header">Bonus talstelsels</li>
+              <li><a href="DECHA.html">Decimaal, Hindisch-Arabisch</a></li>
+              <li><a href="DESOO.html">Decimale talstelels uit het Oosten</a></li>
+              <li><a href="KLAS.html">Klassieke talstelels</a></li>
+              <li><a href="LAT.html">Latijns-Amerikaanse talstelels</a></li>
+              <li class="nav-header">Extra</li>
+              <li><a href="Takenlijst.html">Taakverdeling</a></li>
+              <li><a href="Bronnen.html">Bronnen</a></li>
+              <li><a href="FAQ.html">Vaak gestelde vragen</a></li>
+              <li><a href="Gallerij.html">Galerij</a></li>
+              <li class="nav-header">Muziek</li>
+              <audio controls>
+                <source src="Music.mp3"/>
+              </audio> </li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+
+        <h1> Gray Code </h1>
+        <h4> Gray Code is een speciaal talstelsel dat vaak wordt gebruikt in technologie en machines om fouten te voorkomen en nauwkeurige berekeningen mogelijk te maken. Maar wat maakt Gray Code zo bijzonder, en waarom is het belangrijk </h4>
+        <br><br> <img src="Gray.png" alt="Gray Code" style="width:600px;height:300px;"> <br><br> <br><br><br><br><br>
+
+
+
+        <h1>Gray Code</h1>
+        <div class="row-fluid">
+          <div class="row-fluid">
+              <div class="span4">
+                  <p>(1) Gray code is een vorm van een stelsel; dit talstelsel is vergelijkbaar met binair, enige verschil hebbend dat 2 opeenvolgende getallen, maar in 1 bit verschillen. Bijvoorbeeld 9 = 1101 en 10 = 1111, hierin verschilt maar 1 bit van een “0” naar een “1”. Dit kleine verschil tussen opeenvolgende getallen kan heel veel problemen voorkomen, systemen compacter maken en efficiënter maken, bijvoorbeeld digitale communicatiesystemen. Gray code wordt ook wel “reflective binary code” genoemd omdat oplopende cijfers zijn gespiegeld. Het is dus niet een compleet zelfstandig talstelsel, maar toch is het anders genoeg om zo gezien te worden. </p>
+              </div><!--/span-->
+              <div class="span4">
+                  <p>(2) Om gray code te vormen van binaire getallen moet je het meest significante cijfer pakken, oftewel degene die het meeste links staat, die blijft in gray code hetzelfde. Vervolgens vul je in een XOR-tabel de waarden van de linker en 1 getal daar rechts van in en de output staat dan op de 2de plek van links, dit herhaal je steeds. Als 1 2 3 4 de plekken zijn doe je dan 1 en 2 in een XOR-tabel, de output komt op plaats 2, dit herhaal je met 2 en 3, waarbij de output op plek 3 komt te staan, zo vorm je van binair gray code. XOR is een soort logische poort, het heeft een input nodig, en geeft daarna een output. XOR betekent “exclusive or”, in simpele woorden betekent dit “exclusief voor 1 of de ander” en daarom ook “niet twee dezelfde”. Dus als je 2 inputs hebt A en B dan wordt de output 1 als of A of B = 1 en dus andere = 0, maar niet als ze allebei 1 of 0 zijn.  
+                    </p>
+              </div><!--/span-->
+          </div> <!--/row-->
+      
+          <div class="row-fluid">
+              <div class="row-fluid">
+                  <div class="span4">
+                      <p>(3) Voor Gray code geldt nu ABCD, en voor binair abcd: <br>
+                         Om van 1011(binair) gray code te maken, kopieer je als eerst de MSC over (meest significante cijfer = meest linker = a) dan heb je in gray code al 1BCD. Om nu BCD uit te redeneren/rekenen, moet je de waarden abcd in een XOR-tabel gebruiken. Als we B willen weten moeten we daarvoor a en b invullen, dit gebeurt er:
+                         <br>Het getal 1011 uit binair, wordt dus in Gray Code = 111</p>
+                  </div><!--/span-->
+                  <div class="span4">
+                      <p>(4) Om van gray code binair te maken, doe je dit proces precies andersom maar het is niet zo eenvoudig om te snappen hoe je zoiets de andere kant op doet. Stel je hebt in gray code 1001 staan, genoteerd als ABCD, en je moet het binair maken, in de opstelling abcd, dan doe je als eerste stap A=1 overnemen voor plek a. Je hebt nu voor binair 1bcd. Om bcd te krijgen, vul je a en B in een XOR dan krijg je b, met de getallen Gray Code. 
+                        <BR>Je hebt nu in binair 11cd gekregen, nu vul je de rest in, dus b en C, dan, c en D. 
+                        <BR>Het resulterende cijfer uit 1001 in Gray code, vervormd naar binair is dan 1110. </p>
+                  </div><!--/span-->
+              </div> <!--/row-->
+          </div> <!--/row-->
+      
+          <div class="row-fluid">
+              <div class="row-fluid">
+                  <div class="span4">
+                      <p>(5) Deze variant van binair is niet voor niks uitgevonden, wetenschappers vonden het een beetje zorgwekkend dat stappen van bijvoorbeeld 7 naar 8, 4 bit veranderingen eisten. Bits worden opgeslagen in geheugencellen, deze houden een lading, als er elektriciteit in zit dan is het een 1 en als dat niet het geval is staat er een 0. Als er nou zo een geheugencel kapot is bijvoorbeeld van abcd plek b, dan kan er bij een verandering van 7 naar 8 grote problemen optreden. 7 in binair is 0111, en voor 8; 1000. </p>
+                  </div><!--/span-->
+                  <div class="span4">
+                      <p>(6) Als plek b nu kapot is en geen stroom meer eruit of erin laat, en de rest verandert wel gebeurt er dit: 0111 à 1100, dit is dan 12 in plaats van de gewenste 8. Hier zie je dat als je 1 geheugencel hebt die kapot is je al, in dit geval nummers 8-11 maar eigenlijk een ontelbaar aantal getallen, overslaat en niet meer gevormd kunnen worden. Zou dit in gray code zijn geweest dan omdat je voor een getal verschil maar 1 bit moet veranderen, komen er veel minder foutmeldingen in het systeem. In binair moest je als je van 7 naar 8 wilde, 4 bits veranderen, wat als er 1 cel kapot is, al niet werkt. Wil je dit in gray code doen, is er maar een 25% kans dat er een foutmelding voorkomt, want er verandert immers maar 1 van de 4 bits. </p>
+                  </div><!--/span-->
+              </div> <!--/row-->
+          </div> <!--/row-->
+      </div> <!--/row-->
+
+      <div class="row-fluid">
+        <div class="row-fluid">
+            <div class="span4">
+                <p>(7) Dit wordt ook wel eens gebruikt in motoren die dingen moeten draaien in bijvoorbeeld machines, vliegtuigen, en robots. Heel groot deel van onze maatschappij is afhankelijk van allemaal productielijnen, die allemaal machines bevatten om die bepaalde producten te creëren. Dit is een van de redenen waarom foutmelding minimalisatie essentieel is voor iedereen in onze maatschappij, zonder dit systeem zouden er veel meer fouten plaatsvinden en obstakels vormen. De motoren moeten namelijk niet opeens naar 90° naar links bewegen als je het maar 60° naar links wilde. Als dit wel het geval was zouden er ook veel meer ongelukken plaatsvinden, in vliegtuigen, in fabrieken, overal waar draaiende bewegingen bestuurd worden door een chip. Het zorgt ervoor dat de juiste bewegingen worden uitgevoerd met juiste snelheid, richting en tijdstip.  </p>
+            </div><!--/span-->
+            <div class="span4">
+                <p>(8) Gray code maakt systemen ook efficiënter, omdat je voor een verandering in waarde immers maar 1 bit hoeft te veranderen, in plaats van bijvoorbeeld 7 à 8, 4 bits die je moet veranderen. Door deze verhoogde efficiëntie is het dus ook mogelijk om energie te besparen.  </p>
+            </div><!--/span-->
+        </div> <!--/row-->
+    
+        <div class="row-fluid">
+            <div class="row-fluid">
+                <div class="span4">
+                    <p>(9) Bepaalde Algoritmes eisen ook het gebruik van gray code, zodat ze berekeningen kunnen maken, die verder gebruikt kunnen worden in hele specifieke bewegingen. Deze algoritmes kunnen niet worden uitgevoerd door binair, en je moet daarvoor daarom gray code gebruiken.</p>
+                </div><!--/span-->
+                <div class="span4">
+                    <p>(10) Kortom, het wordt heel veel gebruikt in allemaal computersystemen om roterende schijven goed en accuraat te coderen, zodat er geen fouten optreden die ongelukken veroorzaken, in de draaiende componenten van machines. Het helpt de machines en de “operating systems” van die machines met accuratere en betere output in vergelijken met de input en voorkomt heel veel foutmeldingen. </p>
+                </div><!--/span-->
+            </div> <!--/row-->
+        </div> <!--/row-->
+    
+        <div class="row-fluid">
+            <div class="row-fluid">
+                <div class="span4">
+                    <p></p>
+                </div><!--/span-->
+                <div class="span4">
+                    <p></p>
+                </div><!--/span-->
+            </div> <!--/row-->
+        </div> <!--/row-->
+    </div> <!--/row-->
+    
+      
+  <hr>
+      <footer>
+        <p>Federico Haster & Robin Hamerslag, 2024</p>
+      </footer>
+
+
+  </body>
+</html>
